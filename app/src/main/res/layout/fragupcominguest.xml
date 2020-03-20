@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     android:background="#e9e7e7"
-    tools:context="com.wk.guestpass.app.Fragments.UpcGuest">
+    tools:context="com.wk.guestpass.app.fragments.UpcGuest">
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -46,7 +46,7 @@
             android:text="Upcoming Guest"
             android:textSize="20dp" />
 
-        <android.support.v7.widget.SearchView
+        <androidx.appcompat.widget.SearchView
             style="@style/Searchview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,21 +84,21 @@
             android:padding="70sp"
             android:id="@+id/nodaata" />
 
-        <android.support.v4.widget.SwipeRefreshLayout
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeToRefresh"
             android:layout_below="@+id/mainheader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/UpcomingRecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:paddingBottom="70dp"/>
 
-        </android.support.v4.widget.SwipeRefreshLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </RelativeLayout>
 </LinearLayout>

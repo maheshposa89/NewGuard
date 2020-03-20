@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.Fragments;
+package com.wk.guestpass.app.fragments;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -20,13 +20,13 @@ import android.os.Handler;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.core.content.FileProvider;
+import androidx.appcompat.app.AlertDialog;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -54,8 +54,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.Utilities.Config;
-import com.wk.guestpass.app.Utilities.SessionManager;
+import com.wk.guestpass.app.utilities.Config;
+import com.wk.guestpass.app.utilities.SessionManager;
 import com.github.ybq.android.spinkit.style.CubeGrid;
 import com.google.zxing.WriterException;
 
@@ -80,7 +80,7 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.Context.WINDOW_SERVICE;
-import static com.wk.guestpass.app.Fragments.TodaysGuest.TAG;
+import static com.wk.guestpass.app.fragments.TodaysGuest.TAG;
 
 public class AddGuest extends Fragment {
 

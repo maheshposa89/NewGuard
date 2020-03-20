@@ -1,9 +1,9 @@
-package com.wk.guestpass.app.Activities;
+package com.wk.guestpass.app.activities;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -25,8 +25,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.Utilities.Config;
-import com.wk.guestpass.app.Utilities.SessionManager;
+import com.wk.guestpass.app.utilities.Config;
+import com.wk.guestpass.app.utilities.SessionManager;
 import com.github.ybq.android.spinkit.style.CubeGrid;
 
 import org.json.JSONException;

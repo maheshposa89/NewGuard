@@ -1,10 +1,10 @@
-package com.wk.guestpass.app.Utilities;
+package com.wk.guestpass.app.utilities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.wk.guestpass.app.Activities.LoginActivity;
+import com.wk.guestpass.app.activities.LoginActivity;
 
 import java.util.HashMap;
 

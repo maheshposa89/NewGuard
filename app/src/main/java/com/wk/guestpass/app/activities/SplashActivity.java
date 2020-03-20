@@ -1,10 +1,10 @@
-package com.wk.guestpass.app.Activities;
+package com.wk.guestpass.app.activities;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -22,7 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.Utilities.Config;
+import com.wk.guestpass.app.utilities.Config;
 
 import org.json.JSONException;
 import org.json.JSONObject;

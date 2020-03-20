@@ -5,7 +5,7 @@
     android:id="@+id/homepage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wk.guestpass.app.Activities.MainActivity">
+    tools:context="com.wk.guestpass.app.activities.MainActivity">
 
     <RelativeLayout
         android:id="@+id/activity_main"
@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/gradient1" />
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:layout_marginLeft="60dp"
                 android:src="@drawable/logo" />
 
-            <android.support.v7.widget.SearchView
+            <androidx.appcompat.widget.SearchView
                 style="@style/Searchview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,25 +82,25 @@
                 android:src="@drawable/nodatahome"
                 android:visibility="gone" />
 
-            <android.support.v4.widget.SwipeRefreshLayout
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/swipeToRefresh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mainheader">
 
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/homelistrecycler"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
                     android:paddingBottom="172dp" />
 
-            </android.support.v4.widget.SwipeRefreshLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         </RelativeLayout>
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/bottombtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

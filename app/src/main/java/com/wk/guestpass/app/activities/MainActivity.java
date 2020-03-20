@@ -1,32 +1,39 @@
-package com.wk.guestpass.app.Activities;
+package com.wk.guestpass.app.activities;
 
 import android.Manifest;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -45,15 +52,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.wk.guestpass.app.Adpaters.HomeListAdapter;
-import com.wk.guestpass.app.Fragments.AddGuest;
-import com.wk.guestpass.app.Fragments.TodaysGuest;
-import com.wk.guestpass.app.Fragments.UpcGuest;
-import com.wk.guestpass.app.Models.ListModel;
+import com.wk.guestpass.app.adpaters.HomeListAdapter;
+import com.wk.guestpass.app.fragments.AddGuest;
+import com.wk.guestpass.app.fragments.TodaysGuest;
+import com.wk.guestpass.app.fragments.UpcGuest;
+import com.wk.guestpass.app.models.ListModel;
 import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.Utilities.Config;
-import com.wk.guestpass.app.Utilities.RecyclerTouchListener;
-import com.wk.guestpass.app.Utilities.SessionManager;
+import com.wk.guestpass.app.utilities.Config;
+import com.wk.guestpass.app.utilities.RecyclerTouchListener;
+import com.wk.guestpass.app.utilities.SessionManager;
 import com.github.ybq.android.spinkit.style.CubeGrid;
 
 import org.json.JSONArray;
@@ -68,7 +75,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
 import com.crashlytics.android.Crashlytics;
+
 import io.fabric.sdk.android.Fabric;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -90,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
     Dialog dialog;
     private static final int PERMISSION_REQUEST_CODE = 200;
     Toolbar toolbar;
-    private TextView drname, flatno, apartment, propcodes,logouts, help, about;
+    private TextView drname, flatno, apartment, propcodes, logouts, help, about;
     private TextView dname, ddate, dsetime, dintime, dcntct, dguest, dpurpose;
     String nm, ap, noo;
-    android.support.v7.app.ActionBar actionBar;
+    androidx.appcompat.app.ActionBar actionBar;
     DrawerLayout Drawer;
     ActionBarDrawerToggle mDrawerToggle;
     private String usersssid, username, pcode, fno, aprt;
@@ -108,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.drawerhome);
 
-        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         actionBar = getSupportActionBar();
@@ -122,8 +131,8 @@ public class MainActivity extends AppCompatActivity {
         aprt = users.get(SessionManager.KEY_APRT);
 
         progressBar = (ProgressBar) findViewById(R.id.progress);
-        mainscreen=(RelativeLayout)findViewById(R.id.overmain);
-        bgrnd=(RelativeLayout)findViewById(R.id.bgrnd);
+        mainscreen = (RelativeLayout) findViewById(R.id.overmain);
+        bgrnd = (RelativeLayout) findViewById(R.id.bgrnd);
 
         drname = (TextView) findViewById(R.id.drname);
         flatno = (TextView) findViewById(R.id.flatno);
@@ -136,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         help = (TextView) findViewById(R.id.help);
         about = (TextView) findViewById(R.id.about);
 
-       // requestpermission();
+        // requestpermission();
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeToRefresh);
         mRecyclerView = (RecyclerView) findViewById(R.id.homelistrecycler);
@@ -214,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        if(!usersssid.isEmpty()){
+        if (!usersssid.isEmpty()) {
             cubeGrid = new CubeGrid();
             cubeGrid.setColor(getResources().getColor(R.color.colorPrimary));
             cubeGrid.start();
@@ -272,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog  = new Dialog(MainActivity.this);
+                dialog = new Dialog(MainActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.help);
                 dialog.setCanceledOnTouchOutside(true);
@@ -287,7 +296,17 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" +noo));
+                        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + noo));
+                        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                            // TODO: Consider calling
+                            //    ActivityCompat#requestPermissions
+                            // here to request the missing permissions, and then overriding
+                            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                            //                                          int[] grantResults)
+                            // to handle the case where the user grants the permission. See the documentation
+                            // for ActivityCompat#requestPermissions for more details.
+                            return;
+                        }
                         startActivity(intent);
                     }
                 });

@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.Activities;
+package com.wk.guestpass.app.activities;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -33,8 +33,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.Utilities.Config;
-import com.wk.guestpass.app.Fragments.TodaysGuest;
+import com.wk.guestpass.app.utilities.Config;
+import com.wk.guestpass.app.fragments.TodaysGuest;
 
 import org.json.JSONArray;
 import org.json.JSONException;

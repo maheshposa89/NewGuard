@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.Utilities;
+package com.wk.guestpass.app.utilities;
 
 public class Config {
     public static final String login="http://way.sercue.com/Api/user_login";
