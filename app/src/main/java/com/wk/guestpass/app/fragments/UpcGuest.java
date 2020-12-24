@@ -50,8 +50,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
 import es.dmoral.toasty.Toasty;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -78,7 +76,7 @@ public class UpcGuest extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Fabric.with(getActivity(), new Crashlytics());
+        //Fabric.with(getActivity(), new Crashlytics());
         View v = inflater.inflate(R.layout.fragupcominguest, container, false);
         session = new SessionManager(getActivity());
 

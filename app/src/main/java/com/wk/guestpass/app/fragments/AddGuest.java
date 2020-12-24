@@ -17,8 +17,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
 import android.provider.ContactsContract;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -106,7 +104,7 @@ public class AddGuest extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Fabric.with(getActivity(), new Crashlytics());
+        //Fabric.with(getActivity(), new Crashlytics());
         View view = inflater.inflate(R.layout.fragaddguest, container, false);
         sessionManager=new SessionManager(getActivity());
        // addcontct = view.findViewById(R.id.contact);

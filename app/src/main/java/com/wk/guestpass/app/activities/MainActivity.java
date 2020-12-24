@@ -76,9 +76,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import com.crashlytics.android.Crashlytics;
 
-import io.fabric.sdk.android.Fabric;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CALL_PHONE;
@@ -114,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
+        //Fabric.with(this, new Crashlytics());
         setContentView(R.layout.drawerhome);
 
         toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);

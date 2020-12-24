@@ -42,8 +42,6 @@ import com.github.ybq.android.spinkit.style.CubeGrid;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -78,7 +76,7 @@ public class TodaysGuest extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Fabric.with(getActivity(), new Crashlytics());
+        //Fabric.with(getActivity(), new Crashlytics());
         View v = inflater.inflate(R.layout.fragtodaysguest, container, false);
 
         session = new SessionManager(getActivity());
