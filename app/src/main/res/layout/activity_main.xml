@@ -19,7 +19,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient1" />
+            android:background="@color/colorPrimaryDark" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -39,7 +39,7 @@
                 android:layout_width="130dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="60dp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/hlogo" />
 
             <androidx.appcompat.widget.SearchView
                 style="@style/Searchview"
@@ -108,11 +108,18 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="40dp"
-            android:backgroundTint="#31cca5"
+            android:backgroundTint="@color/colorAccent"
             android:src="@drawable/ic_add_black_24dp"
             app:borderWidth="0dp"
             app:fabSize="auto" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/hicon"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 
     <RelativeLayout

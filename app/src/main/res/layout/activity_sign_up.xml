@@ -11,7 +11,7 @@
         android:id="@+id/homeimage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#30caa5">
+        android:background="@color/colorAccent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -58,7 +58,8 @@
             android:scaleType="fitXY"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_height="152dp" />
+            android:layout_height="150dp"
+            android:layout_marginBottom="16dp"/>
 
     </RelativeLayout>
 
@@ -398,7 +399,7 @@
                     android:id="@+id/tc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="#31cca5" />
+                    android:buttonTint="@color/colorAccent" />
 
 
                 <TextView
@@ -408,7 +409,7 @@
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/ubuntu"
                     android:text="@string/stext"
-                    android:textColor="#31cca5"
+                    android:textColor="@color/colorAccent"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -461,7 +462,7 @@
                         android:layout_toRightOf="@+id/acc"
                         android:text="@string/stext1"
                         android:textAllCaps="true"
-                        android:textColor="#31cca5"
+                        android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
