@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.wk.guestpass.app">
+    package="com.passtag.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <!--  <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -22,7 +22,7 @@
         tools:replace="android:icon"
         tools:targetApi="m">
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="com.passtag.app.activities.SplashActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,12 +51,12 @@
             android:value="167a28602f5f2685fc62f540ec502d84b85f5ec3" />-->
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.passtag.app.activities.MainActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activities.SignUpActivity"
+            android:name="com.passtag.app.activities.SignUpActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name="com.passtag.app.activities.LoginActivity" />
 
 
         <uses-library

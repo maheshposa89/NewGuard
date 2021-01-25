@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.activities;
+package com.passtag.app.activities;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -23,9 +23,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.utilities.Config;
-import com.wk.guestpass.app.utilities.SessionManager;
+import com.passtag.app.R;
+import com.passtag.app.utilities.Config;
+import com.passtag.app.utilities.SessionManager;
 import com.github.ybq.android.spinkit.style.CubeGrid;
 
 import org.json.JSONException;

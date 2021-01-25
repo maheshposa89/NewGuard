@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.models;
+package com.passtag.app.models;
 
 /**
  * Created by Android on 11/22/2017.

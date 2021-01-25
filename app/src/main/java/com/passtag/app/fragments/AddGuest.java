@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.fragments;
+package com.passtag.app.fragments;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -51,9 +51,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.utilities.Config;
-import com.wk.guestpass.app.utilities.SessionManager;
+import com.passtag.app.R;
+import com.passtag.app.utilities.Config;
+import com.passtag.app.utilities.SessionManager;
 import com.github.ybq.android.spinkit.style.CubeGrid;
 import com.google.zxing.WriterException;
 
@@ -78,7 +78,7 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.Context.WINDOW_SERVICE;
-import static com.wk.guestpass.app.fragments.TodaysGuest.TAG;
+import static com.passtag.app.fragments.TodaysGuest.TAG;
 
 public class AddGuest extends Fragment {
 

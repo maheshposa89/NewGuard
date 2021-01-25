@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Visitor Pass</string>
+    <string name="app_name">PassTag</string>
     <string name="text1">Please enter your mobile number &amp; pin</string>
     <string name="text2">If you dont have login details please click on</string>
     <string name="text3">sign up button and enroll yourself.</string>
@@ -24,7 +24,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="htext">If you have any queries regarding this</string>
-    <string name="htext1">VIGITORPASS App please</string>
+    <string name="htext1">PASSTAG App please</string>
     <string name="htext2">contact to admin</string>
     <string name="htext3">Prasad Pawar</string>
     <string name="htext4">Sai Apartment</string>
@@ -32,10 +32,10 @@
     <string name="htext6">Call Now</string>
 
     <string name="atext">If you have any queries regarding this</string>
-    <string name="atext1">VIGITORPASS App please</string>
+    <string name="atext1">PASSTAG App please</string>
     <string name="atext2">contact to admin</string>
     <string name="atext3">If you have any queries regarding this</string>
-    <string name="atext4">VIGITORPASS App please</string>
+    <string name="atext4">PASSTAG App please</string>
     <string name="atext5">contact to admin</string>
     <string name="atext6">Back</string>
 

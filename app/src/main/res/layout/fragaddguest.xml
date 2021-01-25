@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:clickable="true"
-    tools:context="com.wk.guestpass.app.fragments.AddGuest">
+    tools:context="com.passtag.app.fragments.AddGuest">
 
     <RelativeLayout
         android:id="@+id/activity_main"

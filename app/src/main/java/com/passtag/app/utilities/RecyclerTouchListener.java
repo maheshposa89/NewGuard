@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.utilities;
+package com.passtag.app.utilities;
 
 import android.content.Context;
 import androidx.recyclerview.widget.RecyclerView;

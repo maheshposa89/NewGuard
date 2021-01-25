@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.adpaters;
+package com.passtag.app.adpaters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,8 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.wk.guestpass.app.models.ListModel;
-import com.wk.guestpass.app.R;
+import com.passtag.app.models.ListModel;
+import com.passtag.app.R;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 import java.util.List;

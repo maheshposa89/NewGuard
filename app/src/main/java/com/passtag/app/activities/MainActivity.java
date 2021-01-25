@@ -1,4 +1,4 @@
-package com.wk.guestpass.app.activities;
+package com.passtag.app.activities;
 
 import android.Manifest;
 import android.app.Dialog;
@@ -52,15 +52,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.wk.guestpass.app.adpaters.HomeListAdapter;
-import com.wk.guestpass.app.fragments.AddGuest;
-import com.wk.guestpass.app.fragments.TodaysGuest;
-import com.wk.guestpass.app.fragments.UpcGuest;
-import com.wk.guestpass.app.models.ListModel;
-import com.wk.guestpass.app.R;
-import com.wk.guestpass.app.utilities.Config;
-import com.wk.guestpass.app.utilities.RecyclerTouchListener;
-import com.wk.guestpass.app.utilities.SessionManager;
+import com.passtag.app.adpaters.HomeListAdapter;
+import com.passtag.app.fragments.AddGuest;
+import com.passtag.app.fragments.TodaysGuest;
+import com.passtag.app.fragments.UpcGuest;
+import com.passtag.app.models.ListModel;
+import com.passtag.app.R;
+import com.passtag.app.utilities.Config;
+import com.passtag.app.utilities.RecyclerTouchListener;
+import com.passtag.app.utilities.SessionManager;
 import com.github.ybq.android.spinkit.style.CubeGrid;
 
 import org.json.JSONArray;

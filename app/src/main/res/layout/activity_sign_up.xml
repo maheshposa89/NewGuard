@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context="com.wk.guestpass.app.activities.SignUpActivity">
+    tools:context="com.passtag.app.activities.SignUpActivity">
 
     <RelativeLayout
         android:id="@+id/homeimage"
