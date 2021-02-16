@@ -115,7 +115,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        flats.add("Select Flats");
+        flats.add("Select");
         flatids.add("0");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(SignUpActivity.this, android.R.layout.simple_list_item_1, flats);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
@@ -124,7 +124,7 @@ public class SignUpActivity extends AppCompatActivity {
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(!flats.get(position).equals("Select Flats")){
+                if(!flats.get(position).equals("Select")){
                     spin_val1 = flatids.get(position);
                 }
             }
@@ -147,9 +147,9 @@ public class SignUpActivity extends AppCompatActivity {
 
     public void ClickFolder (){
 
-        if (mySpinner.getSelectedItem().toString().equals("Select Flats")){
+        if (mySpinner.getSelectedItem().toString().equals("Select")){
 
-            Toast toast = Toast.makeText(SignUpActivity.this, "Select Flat First!!!", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(SignUpActivity.this, "Select First!!!", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         }
@@ -217,7 +217,7 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         flats.clear();
                         flatids.clear();
-                        flats.add("Select Flats");
+                        flats.add("Select");
                         flatids.add("0");
                         showMe.dismiss();
                         JSONObject j = null;
@@ -230,7 +230,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 aprtmentname.setText(""+j.getString("appartment"));
                                 adminids = j.getString("admin_id");
 
-                                JSONArray applist = j.getJSONArray("SAI APPARTMENT");
+                                JSONArray applist = j.getJSONArray("Pragmatic Automation Solutions");
                                 if (applist != null && applist.length() > 0) {
                                     for (int i = 0; i < applist.length(); i++) {
                                         JSONObject getOne = applist.getJSONObject(i);
